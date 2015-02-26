@@ -7,11 +7,11 @@ RapidApp::Responder
 
 =head1 SYNOPSIS
 
-package MyModule;
-sub content {
-	if ($error) die RapidApp::Responser::MyErrorResponder->new(\%params);
-	return RapidApp::Responser::MyNormalResponder->new(\%params);
-}
+  package MyModule;
+  sub content {
+    if ($error) die RapidApp::Responder::MyErrorResponder->new(\%params);
+    return RapidApp::Responder::MyNormalResponder->new(\%params);
+  }
 
 =head1 DESCRIPTION
 
@@ -19,7 +19,7 @@ A "Responder" is much like a Catalyst::View, except it is designed to be allocat
 and it can be thrown.  This is much more convenient and less error-prone than setting view
 parameters, putting the view name in the stash, and forwarding to the view.
 
-In fact, I would have naamed the class "View" if that weren't so likely to lead to confusion.
+In fact, I would have named the class "View" if that weren't so likely to lead to confusion.
 
 =head1 ATTRIBUTES
 
